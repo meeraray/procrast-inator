@@ -1,4 +1,4 @@
-const TIME_MIN = 0.1;
+const TIME_MIN = 15;
 
 //circle start
 let progressBar = document.querySelector('.e-c-progress');
