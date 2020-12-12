@@ -5,21 +5,23 @@ var catNames = [];
 function setColors(className, colorList) {
   $(className).each(function(ind) {
     $(this).css("background-color", colorList[ind]);
-    console.log(ind + " " + colorList[ind] + "\n");
+    //console.log(ind + " " + colorList[ind] + "\n");
   });
 }
 
-function endTimer() {
+/*function endTimer() {
     $("#timer").hide();
     $("#menu").show();
-}
+    console.log("test");
+    document.getElementById("alarmSound").play();
+}*/
 
 $().ready(function(){
-    console.log("test");
+    //console.log("test");
     var catColors = ["#390099", "#9e0059", "#ff0054", "#ff5400", "#ffbd00"];
     setColors(".cat", catColors);
     setColors(".proc-form .input-group-text", catColors);
-    console.log(test);
+    //console.log(test);
     
     //$(".setters, .play").hide();
     setColors("#menu .cat", catColors);
@@ -35,7 +37,7 @@ $().ready(function(){
     }
           
     function setCatNames() {
-      console.log("submitted");
+      //console.log("submitted");
       // input validation
       if(!checkValid()) return false;
         
@@ -67,7 +69,8 @@ $().ready(function(){
     $("#menu .btn").click(function() {
       if($(this).text() == "Break") { 
         if($(this).css("background-color") == $("#timer h1").css("color")) {
-          console.log("break already pressed"); return;   
+          //console.log("break already pressed"); 
+          return;   
         }
       }
       var color = $(this).css("background-color");
@@ -78,7 +81,8 @@ $().ready(function(){
       // move to timer    
       $("#menu").hide();
       $("#timer").show();
-      pauseTimer(); // starts timer
+      //pauseTimer(); // starts timer
+      //$("#pause").click();
     });
     
     // set timer color to class
